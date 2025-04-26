@@ -57,3 +57,4 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
     );
   }
 }
+// Updated change password API

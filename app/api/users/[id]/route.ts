@@ -39,3 +39,4 @@ async function _delete(req: Request, { params: { id } }: any) {
     return { deletedSelf: true }
   }
 }
+// Updated user by ID API

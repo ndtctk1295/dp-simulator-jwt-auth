@@ -296,3 +296,5 @@ export function DataTable<TData, TValue>({
     </div>
   );
 }
+/ /   U p d a t e d   d a t a   t a b l e   c o m p o n e n t  
+ 
