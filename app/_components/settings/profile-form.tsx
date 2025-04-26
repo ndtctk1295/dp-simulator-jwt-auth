@@ -28,26 +28,23 @@ const profileFormSchema = z.object({
   firstName: z.string().min(1, "First name is required"),
   lastName: z.string().min(1, "Last name is required"),
   email: z.string().email("Invalid email address"),
-  phone: z.string().optional(),
-  address: z.string().optional(),
 });
 
 type ProfileFormValues = z.infer<typeof profileFormSchema>;
 
 export function ProfileForm({ onComplete }: ProfileFormProps) {
   const { currentUser } = useUserStore();
+
   const form = useForm<ProfileFormValues>({
     defaultValues: {
       firstName: currentUser?.firstName || "",
       lastName: currentUser?.lastName || "",
       email: currentUser?.email || "",
-      phone: currentUser?.phone || "",
-      address: currentUser?.address || "",
     },
   });
+
   const handleSubmit = (data: ProfileFormValues) => {
     console.log("Form submitted:", data);
-    // Here we would typically update the user profile in a real application
     if (onComplete) {
       onComplete();
     }

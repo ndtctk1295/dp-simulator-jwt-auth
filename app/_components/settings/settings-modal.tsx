@@ -28,21 +28,22 @@ const sidebarNavItems = [
     title: "Account",
     href: "#account",
     active: false,
-  },  {
-    title: "Appearance",
-    href: "#appearance",
-    active: false,
   },
-  {
-    title: "Notifications",
-    href: "#notifications",
-    active: false,
-  },
-  {
-    title: "Display",
-    href: "#display",
-    active: false,
-  },
+  // {
+  //   title: "Appearance",
+  //   href: "#appearance",
+  //   active: false,
+  // },
+  // {
+  //   title: "Notifications",
+  //   href: "#notifications",
+  //   active: false,
+  // },
+  // {
+  //   title: "Display",
+  //   href: "#display",
+  //   active: false,
+  // },
 ]
 
 export function SettingsModal() {
