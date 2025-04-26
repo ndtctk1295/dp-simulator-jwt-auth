@@ -6,6 +6,7 @@ import { columns } from './components/columns'
 import { useUserService } from '@/app/_services'
 import { useUserStore } from '@/app/store/use-user-store'
 import { DataTable } from './components/data-table'
+import { Button } from '@/components/ui/button'
 const UsersClient = () => {
   const userService = useUserService()
   const userStore = useUserStore();
@@ -32,7 +33,11 @@ const UsersClient = () => {
       <div className='flex items-center justify-between space-y-2'>
         <div>
           <h2 className='text-2xl font-bold tracking-tight'>Welcome back!</h2>
-          <p className='text-muted-foreground'>Here&apos;s a list of users</p>
+          <p className='text-muted-foreground'>Here&apos;s a list of users - Updated Interface</p>
+        </div>
+        <div className="flex items-center space-x-2">
+          <Button variant="outline" onClick={() => setIsLoading(true)}>Refresh</Button>
+          <Button onClick={() => alert('Export feature coming soon!')}>Export</Button>
         </div>
       </div>
       <DataTable data={formatedUser} columns={columns} isLoading={isLoading} />
